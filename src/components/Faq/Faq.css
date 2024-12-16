@@ -1,0 +1,120 @@
+/*modal*/
+/* Style général du modal */
+.modal {
+    display: none;
+    /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show {
+    display: flex;
+}
+
+/* Contenu du modal */
+.modal-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--terminal-text);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px #0099ff99;
+    overflow-y: auto;
+    max-height: 80vh;
+    font-family: var(--terminal-font);
+    color: var(--terminal-text);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Bouton de fermeture */
+#close-modal {
+    cursor: pointer;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#close-modal:hover {
+    color: var(--terminal-bg);
+}
+
+/* Scrollbar pour le modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--terminal-text);
+    border-radius: 0.5rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.faq-section {
+    margin-bottom: 10px;
+}
+
+.faq-title {
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px;
+    opacity: 0.8;
+    background-color: #1a1a1a;
+    color: var(--terminal-text);
+    margin: 0;
+    transition: background-color 0.3s ease;
+    font-weight: normal;
+    border-radius: 0.5rem;
+}
+
+.faq-title:hover {
+    background-color: #2a2a2a;
+}
+
+.faq-title.active {
+    background-color: #2a2a2a;
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 10px;
+    background-color: #111;
+    border-radius: 0.5rem;
+}
+
+.faq-content.show {
+    max-height: 1000px;
+    padding: 10px;
+}
+
+.faq-content ol {
+    padding-left: 20px;
+}
+
+.faq-content p,
+.faq-content li {
+    color: var(--terminal-text);
+}

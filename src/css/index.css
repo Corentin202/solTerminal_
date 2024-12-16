@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'monospace';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a;
+}
+
+:root {
+  --terminal-bg: #1a1a1a;
+  --terminal-text: #fff;
+  --terminal-font: 'Courier New', monospace;
+}
+
+/* Style pour la barre de défilement */
+::-webkit-scrollbar {
+  width: 8px;  /* largeur de la barre de défilement */
+  height: 8px; /* hauteur de la barre de défilement horizontale */
+  border-radius: 0.5rem;
+}
+
+/* Style pour la partie de la barre qui bouge (le "thumb") */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 0.5rem; /* rayon de bordure pour le "thumb" */
+}
+
+/* Style pour la piste de défilement (la partie sur laquelle le thumb glisse) */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 0.5rem; /* rayon de bordure pour la piste */
+}
+
+/* Style pour les coins de la barre de défilement */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
